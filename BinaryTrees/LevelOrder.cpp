@@ -10,7 +10,7 @@ struct Node{
         data = x;
         left = right = NULL;
     }
-}
+};
 vector<int> levelOrder(Node* node)
 {
     vector<int> v;
