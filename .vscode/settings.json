@@ -3,6 +3,7 @@
         "*.html": "html",
         "**/templates/**/*.html": "django-html",
         "*.js": "javascriptreact",
-        "new": "cpp"
+        "new": "cpp",
+        "ostream": "cpp"
     }
 }
