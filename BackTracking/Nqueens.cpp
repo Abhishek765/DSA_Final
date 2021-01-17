@@ -33,7 +33,7 @@ bool isSafe(int row, int col, int n, vector<int> &queenArrangement){
 }
     void nQueens(int col, int n,vector<int>& currArrangements,vector<vector<int>>& possibleCombinations){
         
-        // Base condition
+        // Base condition found one arrangement
         if(col > n){
             possibleCombinations.push_back(currArrangements);
             return;
