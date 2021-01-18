@@ -1,5 +1,5 @@
 // ! Time: O(2^n)
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 // A : given string to search

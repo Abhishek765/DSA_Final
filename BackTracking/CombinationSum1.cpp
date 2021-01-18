@@ -1,6 +1,7 @@
 // ! The largest number of elements in a combination sum would be [min, min, min ...], and to get the upper bound, we can say that for each element in the max length combination array, we can pick from any of the elements we are given.
 // ! Therefore, the complexity should be: len(candidates)^ (target/min(candidates))
 
+//** Distinct elements case **//
 #include <bits/stdc++.h>
 using namespace std;
 
