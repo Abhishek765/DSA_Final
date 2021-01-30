@@ -51,7 +51,7 @@ public:
     
     bool searchWord(string word, vector<vector<char> >& board, int m, int n){
         
-        // Visited add list (2d)
+        // Visited adjacency list (2d)
         vector<bool> vis[m];
         
         // intialize visited to false 
