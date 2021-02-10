@@ -3,8 +3,6 @@
 using namespace std;
 
 
-
-
 bool isWildCard(int i,int j, int patternLen,int strLen, string pattern, string str,vector<int> dp[]){
     
     // Base conditions
