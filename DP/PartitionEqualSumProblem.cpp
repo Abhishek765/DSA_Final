@@ -3,21 +3,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Solution{
+class Solution {
 public:
-    int equalPartition(int N, int arr[])
-    {
-        int sum = 0;
-        
-        for(int i=0;i<N; i++){
-            sum+=arr[i];
-        }
-        // Odd sum then we can't divide it in two parts of equal sum
-        if(sum%2) return 0;
-        
-        sum/=2;
-        
-        // Variation of Knapsack 
+    
+    bool subSetSum(vector<int> arr, int sum,int N){
         
         bool dp[N+1][sum+1];
         // Initialization step
@@ -31,6 +20,7 @@ public:
     
             }
         }
+        
         for(int i=1;i<=N; i++){
             for(int j=1; j<=sum; j++){
                
@@ -46,5 +36,21 @@ public:
         
         
         return dp[N][sum];
+        
+    }
+    bool canPartition(vector<int>& nums) {
+        int size = nums.size();
+        
+//         Variation of Subset sum
+        int sum =0;
+        
+        for(int i: nums)
+                sum+= i;
+        
+        if(sum%2) return false; // for Odd sum partition can't be possible
+        
+        // else just do the subset sum problem by taking sum as sum/2
+        return subSetSum(nums, sum/2,nums.size());
+        
     }
 };
