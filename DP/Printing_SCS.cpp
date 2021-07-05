@@ -32,7 +32,7 @@ void lcs(string x, string y, int n, int m)
     }
 }
 
-string printLCSubSequence(string x, string y, int n, int m)
+string printSCSubSequence(string x, string y, int n, int m)
 {
     string ans;
 
@@ -54,12 +54,17 @@ string printLCSubSequence(string x, string y, int n, int m)
             // go to the maximum side
             if (dp[i][j - 1] > dp[i - 1][j])
             {
+                ans.push_back(y[j - 1]);
                 j--;
             }
             else
+            {
+                ans.push_back(x[i - 1]);
                 i--;
+            }
         }
     }
+
     reverse(ans.begin(), ans.end());
     return ans;
 }
@@ -74,9 +79,9 @@ int main()
 
     // do LCS and get the table
     lcs(s1, s2, n, m);
-    cout << "LCS length: " << dp[n][m] << endl;
+    cout << "SCS length: " << (m + n) - dp[n][m] << endl;
 
-    cout << "LCS: " << printLCSubSequence(s1, s2, n, m) << endl;
+    cout << "SCS: " << printSCSubSequence(s1, s2, n, m) << endl;
 
     return 0;
 }
